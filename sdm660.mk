@@ -329,6 +329,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# Offmode Charging
+PRODUCT_PACKAGES += \
+    omni_charger_res_images
+
 # Omni display
 PRODUCT_PACKAGES += \
     OmniDisplayManager
