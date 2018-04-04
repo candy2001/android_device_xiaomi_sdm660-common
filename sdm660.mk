@@ -141,8 +141,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     libbthost_if
 
+# Camera
 PRODUCT_PACKAGES += \
-    Snap
+    SnapdragonCamera2
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
