@@ -421,7 +421,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     libqsap_sdk \
     libwifi-hal-qcom \
-    wcnss_service \
     wpa_supplicant \
     wpa_supplicant.conf
 
