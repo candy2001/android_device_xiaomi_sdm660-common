@@ -39,6 +39,9 @@ $(call inherit-product, $(COMMON_PATH)/properties.mk)
 # Boot animation
 TARGET_BOOTANIMATION_SIZE := 1080p
 
+# GMS
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay \
