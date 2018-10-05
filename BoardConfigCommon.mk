@@ -149,6 +149,9 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 # CNE and DPM
 BOARD_USES_QCNE := true
 
+# Command Line Tools
+BOARD_INCLUDE_CMDLINE_TOOLS := true
+
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
