@@ -35,7 +35,7 @@ TARGET_BOOTANIMATION_SIZE := 1080p
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay \
-    $(COMMON_PATH)/overlay-lineage
+    $(COMMON_PATH)/overlay-omni
 
 # Permissions
 PRODUCT_COPY_FILES += \
