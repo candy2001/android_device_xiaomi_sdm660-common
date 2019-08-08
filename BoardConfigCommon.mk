@@ -67,6 +67,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := false
 
 # QCOM Audio/Media/Display
 TARGET_QCOM_AUDIO_VARIANT := caf-sdm660
