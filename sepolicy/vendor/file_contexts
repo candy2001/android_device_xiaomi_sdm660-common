@@ -62,5 +62,8 @@
 # Video4linux sysfs nodes
 /sys/devices/soc/caa0000\.qcom,jpeg/video4linux/video1(/.*)?   u:object_r:sysfs_graphics:s0
 
+# Vibrator
+/sys/devices/virtual/timed_output/vibrator(/.*)?  u:object_r:sysfs_vibrator:s0
+
 # USB
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.xiaomi_sdm660       u:object_r:hal_usb_default_exec:s0
