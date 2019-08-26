@@ -332,10 +332,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     omni_charger_res_images
 
-# Omni display
-PRODUCT_PACKAGES += \
-    OmniDisplayManager
-
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
@@ -438,7 +434,7 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_CFI_INCLUDE_PATHS += \
     hardware/qcom/wlan-caf/qcwcn/wpa_supplicant_8_lib
-		
+
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
