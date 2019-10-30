@@ -254,9 +254,12 @@ TARGET_USES_INTERACTION_BOOST := true
 # Recovery
 ifeq ($(AB_OTA_UPDATER), true)
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab_AB.qcom
+else ifeq ($(BOARD_USES_A_ONLY_SYSTEM_AS_ROOT), true)
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab_A.qcom
 else
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 endif
+
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Renderscript
@@ -277,6 +280,19 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
 # Telephony
 TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
+
+# System as root
+ifeq ($(BOARD_USES_A_ONLY_SYSTEM_AS_ROOT), true)
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init
+endif
+
+# Device mapper verity
+ifeq ($(BOARD_USES_A_ONLY_SYSTEM_AS_ROOT), true)
+PRODUCT_SYSTEM_VERITY_PARTITION=/dev/block/bootdevice/by-name/system
+PRODUCT_VENDOR_VERITY_PARTITION=/dev/block/bootdevice/by-name/vendor
+$(call inherit-product, build/target/product/verity.mk)
+endif
 
 # Treble
 BOARD_VNDK_RUNTIME_DISABLE := true
