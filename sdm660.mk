@@ -176,7 +176,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libMiWatermark_shim \
-    Snap
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
