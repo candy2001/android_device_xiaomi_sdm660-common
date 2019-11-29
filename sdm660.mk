@@ -502,7 +502,7 @@ PRODUCT_BOOT_JARS += \
 
 # Wallpapers
 PRODUCT_PACKAGES += \
-   WallpapersBReel2019
+    PixelLiveWallpaperPrebuilt
 
 # XiaomiParts
 #PRODUCT_PACKAGES += \
